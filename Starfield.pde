@@ -1,20 +1,24 @@
 //your code here
 void setup()
 {
-	//your code here
+  background(0);
+  size(300,300);
+  //your code here
 }
 void draw()
 {
-	//your code here
+  //your code here
 }
 class Particle
 {
-	//your code here
+  double myX, myY, spd, theta;
+  color myColor;
+  Particle(){
+    
+  }//constructor end
 }
 
 class OddballParticle //inherits from Particle
 {
-	//your code here
+  //your code here
 }
-
-
