@@ -29,7 +29,6 @@ class Particle
   double myX, myY, spd, theta, stroke;
   color myColor;
   Particle(){
-    stroke=(float)Math.random()*3;
     myX=150;
     myY=150;
     spd=(Math.random()*10);
@@ -37,7 +36,7 @@ class Particle
     myColor= color((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
   }//constructor end
   void show(){
-  strokeWeight((float)stroke);
+  strokeWeight((float)Math.random()*3);
   stroke(myColor);
   point((float)myX,(float)myY);
   }//end show
@@ -50,12 +49,24 @@ class Particle
 class OddballParticle extends Particle
 {
   OddballParticle(){
-    stroke=15;
     myX=150;
     myY=150;
     spd=(Math.random()*5);
     theta= (float)(2*PI*Math.random());
     myColor= 255;
+  }
+  void show(){
+    strokeWeight(1.5);
+    stroke(0);
+    fill(127);
+    ellipse((float)myX,(float)myY,40,20);
+    fill(255);
+    ellipse((float)myX,(float)myY-5,25,17);
+    fill(0,255,0);
+    ellipse((float)myX,(float)myY-5,10,10);
+    strokeWeight(2);
+    point((float)myX+2,(float)myY-5);
+    point((float)myX-2,(float)myY-5);
   }
   //your code here
 }
