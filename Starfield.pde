@@ -1,29 +1,4 @@
-Particle[] galaxy= new Particle[1000];
 
-void setup()
-{
-  background(0);
-  size(300,300);
-  for(int i=0; i < galaxy.length; i++){
-    if(i==0){
-      OddballParticle sue = new OddballParticle();
-      galaxy[i]=sue;
-    }
-    if(i>0){
-      Particle bob = new Particle();
-      galaxy[i] = bob;
-    }
-  }
-  //your code here
-}
-void draw()
-{
-  background(0);
-  for(int i=0; i < galaxy.length; i++){
-    galaxy[i].show();
-    galaxy[i].move();
-  }
-}
 class Particle
 {
   double myX, myY, spd, theta, stroke;
@@ -69,4 +44,31 @@ class OddballParticle extends Particle
     point((float)myX-2,(float)myY-5);
   }
   //your code here
+}
+
+Particle[] galaxy= new Particle[1000];
+
+void setup()
+{
+  background(0);
+  size(300,300);
+  for(int i=0; i < galaxy.length; i++){
+    if(i==0){
+      OddballParticle sue = new OddballParticle();
+      galaxy[i]=sue;
+    }
+    if(i>0){
+      Particle bob = new Particle();
+      galaxy[i] = bob;
+    }
+  }
+  //your code here
+}
+void draw()
+{
+  background(0);
+  for(int i=0; i < galaxy.length; i++){
+    galaxy[i].show();
+    galaxy[i].move();
+  }
 }
