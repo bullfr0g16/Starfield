@@ -41,8 +41,8 @@ class Particle
   point((float)myX,(float)myY);
   }//end show
   void move(){
-  myX=myX+spd*Math.cos(theta);
-  myY=myY+spd*Math.sin(theta);
+  myX=myX+spd*cos((float)theta);
+  myY=myY+spd*sin((float)theta);
   }//end move
 }
 
