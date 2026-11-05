@@ -50,7 +50,6 @@ Particle[] galaxy= new Particle[1000];
 
 void setup()
 {
-  background(0);
   size(300,300);
   for(int i=0; i < galaxy.length; i++){
     if(i==0){
