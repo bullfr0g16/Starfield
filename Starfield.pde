@@ -1,7 +1,7 @@
 
 class Particle
 {
-  double myX, myY, spd, theta, stroke;
+  double myX, myY, spd, theta, strok;
   color myColor;
   Particle(){
     myX=150;
